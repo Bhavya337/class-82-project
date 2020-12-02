@@ -1,5 +1,4 @@
 var mouseEvent="empty";
-var lastpositionofx,lastpositionofy;
 color="black";
 width_line=3;
 canvas=document.getElementById("myCanvas");
@@ -20,12 +19,10 @@ if (mouseEvent=="mouseDown"){
     ctx.beginPath();
     ctx.strokeStyle=color;
     ctx.lineWidth=width_line;
-    ctx.moveTo(lastpositionofx,lastpositionofy);
     ctx.arc(current_positon_of_mouse_x,current_position_of_mouse_y,10,0,2*Math.PI);
     ctx.stroke();
 }
-lastpositionofx=current_positon_of_mouse_x;
-lastpositionofy=current_position_of_mouse_y;
+
 
 }
 canvas.addEventListener("mouseUp",my_mouseup);
